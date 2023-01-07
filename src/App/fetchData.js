@@ -17,9 +17,7 @@ export const fetchUsers = () => async dispatch => {
       } else {
         console.log(error)
         dispatch(getDataFailed(error))
-      } 
-      console.log(error)
-      
+      }    
     }
   }
 

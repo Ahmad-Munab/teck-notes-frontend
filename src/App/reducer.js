@@ -31,7 +31,42 @@ const reducer =  (state = initialStates, action) => {
     case 'FETCH_DATA_ERROR':
       return {
         data: [],
-        isLoading: false,
+        loadingUsers: false,
+        loadingNotes: false,
+        error: action.payload
+      }
+    case 'CREATE_USER_REQUEST':
+      return {
+        ...state,
+        createUserSuccess: null,
+        creatingUsers: true,
+        error: null
+      }
+    case 'CREATE_NOTE_REQUEST':
+      return {
+        ...state,
+        createNoteSuccess: null,
+        creatingNotes: true,
+        error: null
+      }
+    case 'CREATE_USER_SUCCESS':
+      return {
+        ...state,
+        createUserSuccess: action.payload,
+        creatingUsers: false,
+        error: null
+      }
+    case 'CREATE_NOTE_SUCCESS':
+      return {
+        ...state,
+        createNoteSuccess: action.payload,
+        creatingNotes: false,
+        error: null
+      }
+    case 'CREATE_DATA_FAILED':
+      return {
+        creatingUsers: false,
+        creatingNotes: false,
         error: action.payload
       }
     default:

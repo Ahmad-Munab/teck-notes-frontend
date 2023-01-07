@@ -3,13 +3,22 @@
   margin: 0;
   padding: 0;
   font-family: 'Signika Negative', sans-serif;
-  /* border: 1px solid black; */
+
 }
 
-.app {
-  text-align: center;
+html {
+  font-size: 1.15rem;
+  overflow-x: hidden;
 }
 
-.description-tooltip {
-  text-decoration: underline;
+.style-hover {
+  transition: all 0.25s;
+  font-size: 1.6rem;
+}
+
+.style-hover:hover {
+  position: relative;
+  top: -4px;
+  font-weight: 470;
+  color: #0052FF;
 }
